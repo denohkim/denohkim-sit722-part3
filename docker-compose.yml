@@ -1,1 +1,19 @@
 # Your Solution
+
+services:
+  book_catalog:
+    build:
+      context: ./book_catalog
+      dockerfile: Dockerfile
+    ports:
+      - "8002:8000"
+    environment:
+      - DATABASE_URL=postgresql://dennohkim_user:GaeM1u2vKNbx4Tw2GLsu4WQbFqiNWXHg@dpg-crt1jge8ii6s73eheje0-a.oregon-postgres.render.com/dennohkim
+  inventory_management:
+    build: 
+      context: ./inventory_management
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8000"
+    environment:
+      - DATABASE_URL=postgresql://dennohkim_user:GaeM1u2vKNbx4Tw2GLsu4WQbFqiNWXHg@dpg-crt1jge8ii6s73eheje0-a.oregon-postgres.render.com/dennohkim
