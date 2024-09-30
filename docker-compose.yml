@@ -8,7 +8,7 @@ services:
     ports:
       - "8002:8000"
     environment:
-      - DATABASE_URL=postgresql://dennohkim_user:GaeM1u2vKNbx4Tw2GLsu4WQbFqiNWXHg@dpg-crt1jge8ii6s73eheje0-a.oregon-postgres.render.com/dennohkim
+      - DATABASE_URL=postgresql://dennohkim_user:GaeM1u2vKNbx4Tw2GLsu4WQbFqiNWXHg@dpg-crt1jge8ii6s73eheje0-a.oregon-postgres.render.com/dennohkim?sslmode=require
   inventory_management:
     build: 
       context: ./inventory_management
@@ -16,4 +16,4 @@ services:
     ports:
       - "8001:8000"
     environment:
-      - DATABASE_URL=postgresql://dennohkim_user:GaeM1u2vKNbx4Tw2GLsu4WQbFqiNWXHg@dpg-crt1jge8ii6s73eheje0-a.oregon-postgres.render.com/dennohkim
+      - DATABASE_URL=postgresql://dennohkim_user:GaeM1u2vKNbx4Tw2GLsu4WQbFqiNWXHg@dpg-crt1jge8ii6s73eheje0-a.oregon-postgres.render.com/dennohkim?sslmode=require
